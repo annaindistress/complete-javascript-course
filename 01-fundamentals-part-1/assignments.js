@@ -21,3 +21,18 @@ console.log(typeof language);
 // let, const and var
 
 language = 'russian';
+
+// Basic Operators
+
+console.log(population / 2);
+population++;
+console.log(population);
+
+let finlandPopulation = 6;
+console.log(population > finlandPopulation);
+
+let averagePopulation = 33;
+console.log(population < averagePopulation);
+
+const description = country + ' is in ' + continent + ', and its ' + population + ' million people speak ' + language;
+console.log(description);
