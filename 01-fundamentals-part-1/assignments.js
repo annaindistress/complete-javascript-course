@@ -40,3 +40,15 @@ console.log(population < averagePopulation);
 // Strings and Template Literals
 
 const description = `${country} is in ${continent}, and its ${population} million people speak ${language}`;
+
+// Taking Decisions: if / else Statements
+
+// population = 13;
+// population = 130;
+
+if (population > averagePopulation) {
+    console.log(`${country}'s population is above average`);
+} else {
+    const diff = averagePopulation - population;
+    console.log(`${country}'s population is ${diff} million below avarage`);
+}
