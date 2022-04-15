@@ -75,3 +75,21 @@ if (averageDolphins > averageKoalas && averageDolphins >= 100) {
 } else {
     console.log('No one wins the trophy 😭');
 }
+
+// Coding Challenge #4
+
+// Test Data 1
+
+// const bill = 275;
+
+// Test Data 2
+
+// const bill = 40;
+
+// Test Data 3
+
+const bill = 430;
+
+const tip = bill >= 50 && bill <= 300 ? bill * 0.15 : bill * 0.2;
+
+console.log(`The bill was ${bill}, the tip was ${tip}, and the total value ${bill + tip}`);
