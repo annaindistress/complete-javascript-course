@@ -159,6 +159,7 @@ console.log(ages);
 
 // Basic Array Operations (Methods)
 
+/*
 // Add Elements
 const friends = ['Michael', 'Steven', 'Peter'];
 const newLength = friends.push('Jay');
@@ -187,3 +188,22 @@ console.log(friends.includes(23));
 if (friends.includes('Peter')) {
     console.log('You have a friend called Peter');
 }
+*/
+
+// Introduction to Objects
+
+const jonasArray = [
+    'Jonas',
+    'Schmedtmann',
+    2037 - 1991,
+    'teacher',
+    ['Michael', 'Peter', 'Steven']
+];
+
+const jonas = {
+    firstName: 'Jonas',
+    lastName: 'Schmedtmann',
+    age: 2037 - 1991,
+    job: 'teacher',
+    teacher: ['Michael', 'Peter', 'Steven']
+};

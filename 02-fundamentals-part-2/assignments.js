@@ -84,3 +84,13 @@ if (!neighbours.includes('Germany')) {
 
 neighbours[neighbours.indexOf('Belarus')] = 'Ukraine';
 console.log(neighbours);
+
+// Introduction to Objects
+
+const myCountry = {
+    country: 'Georgia',
+    capital: 'Tbilisi',
+    language: 'Georgian',
+    population: 3,
+    neighbours: ['Armenia', 'Turkey', 'Russia']
+};
