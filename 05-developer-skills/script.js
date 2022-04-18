@@ -79,3 +79,19 @@ const measureKelvin = function () {
 };
 
 // console.log(measureKelvin());
+
+// Coding Challenge #1
+
+const data1 = [17, 21, 23];
+const data2 = [12, 5, -5, 0, 4];
+
+function printForecast(temps) {
+    let forecast = '...';
+    for (let i = 0; i < temps.length; i++) {
+        forecast += ` ${temps[i]}°C in ${i + 1} days ...`;
+    }
+    return forecast;
+}
+
+console.log(printForecast(data1));
+console.log(printForecast(data2));
