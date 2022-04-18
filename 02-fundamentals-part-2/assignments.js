@@ -92,7 +92,14 @@ const myCountry = {
     capital: 'Tbilisi',
     language: 'georgian',
     population: 3,
-    neighbours: ['Armenia', 'Turkey', 'Russia']
+    neighbours: ['Armenia', 'Turkey', 'Russia'],
+    checkIsland: function () {
+        this.isIsland = this.neighbours.length === 0;
+        return this.isIsland;
+    },
+    describe: function () {
+        console.log(`${this.country} has ${this.population} million ${this.language}-speaking people, ${this.neighbours.length} neighbouring countries and a capital called ${this.capital}`);
+    }
 };
 
 // Dot vs. Bracket Notation
@@ -103,3 +110,8 @@ myCountry.population += 2;
 console.log(myCountry.population);
 myCountry['population'] -= 2;
 console.log(myCountry.population);
+
+// Object Methods
+
+myCountry.describe();
+console.log(myCountry.checkIsland());
