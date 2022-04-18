@@ -313,6 +313,7 @@ for (let rep = 1; rep <= 10; rep++) {
 
 // Looping Arrays, Breaking and Continuing
 
+/*
 const jonas = [
     'Jonas',
     'Schmedtmann',
@@ -350,4 +351,28 @@ console.log('--- BREAK WITH NUMBER ---');
 for (let i = 0; i < jonas.length; i++) {
     if (typeof jonas[i] === 'number') break;
     console.log(jonas[i], typeof jonas[i]);
+}
+*/
+
+// Looping Backwards and Loops in Loops
+
+const jonas = [
+    'Jonas',
+    'Schmedtmann',
+    2037 - 1991,
+    'teacher',
+    ['Michael', 'Peter', 'Steven'],
+    true
+];
+
+for (let i = jonas.length - 1; i >= 0; i--) {
+    console.log(i, jonas[i]);
+}
+
+for (let exercise = 1; exercise <= 3; exercise++) {
+    console.log(`--- Starting exercise ${exercise}`);
+
+    for (let rep = 1; rep <= 5; rep++) {
+        console.log(`Exercise ${exercise}: Lifting weight repetition ${rep} 🏋️‍♂️`);
+    }
 }
