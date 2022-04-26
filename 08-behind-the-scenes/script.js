@@ -128,6 +128,7 @@ f();
 
 // Regular Functions vs. Arrow Functions
 
+/*
 var firstName = 'Matilda';
 
 const jonas = {
@@ -167,3 +168,35 @@ const addArrow = (a, b) => {
 }
 
 addArrow(1, 2);
+*/
+
+// Primitives vs. Object
+
+let age = 30;
+let oldAge = age;
+age = 31;
+console.log(age);
+console.log(oldAge);
+
+const me = {
+    name: 'Jonas',
+    age: 30,
+    family: ['Alice', 'Bob'],
+}
+
+const friend = me;
+friend.age = 27;
+
+console.log('Friend:', friend);
+console.log('Me', me);
+
+const friend1 = Object.assign({}, me);
+friend1.age = 30;
+
+console.log('Friend 1:', friend1);
+console.log('Me', me);
+
+friend1.family.push('Mary');
+friend1.family.push('John');
+
+console.log('Friend 1:', friend1);
