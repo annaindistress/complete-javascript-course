@@ -79,6 +79,7 @@ team1 > team2 && console.log('Team 2 is more likely to win');
 
 // Coding Challenge #2
 
+/*
 // 1.
 for (const [i, name] of game.scored.entries())
   console.log(`Goal ${i + 1}: ${name}`);
@@ -107,3 +108,41 @@ for (const scorer of game.scored)
     : 1;
 
 console.log(scorers);
+*/
+
+// Coding challenge #3
+
+const gameEvents = new Map([
+  [17, '⚽ GOAL'],
+  [36, '🔁 Substitution'],
+  [47, '⚽ GOAL'],
+  [61, '🔁 Substitution'],
+  [64, '🔶 Yellow card'],
+  [69, '🔴 Red card'],
+  [70, '🔁 Substitution'],
+  [72, '🔁 Substitution'],
+  [76, '⚽ GOAL'],
+  [80, '⚽ GOAL'],
+  [92, '🔶 Yellow card'],
+]);
+
+// 1.
+const events = [...new Set(gameEvents.values())];
+
+// 2.
+gameEvents.delete(64);
+
+// 3.
+const time = [...gameEvents.keys()][gameEvents.size - 1];
+
+console.log(
+  `An event happend, on average, every ${
+    (time > 90 ? time : 90) / gameEvents.size
+  } minutes`
+);
+
+// 4.
+for (const [key, value] of gameEvents) {
+  const halfStr = key < 45 ? 'FIRST' : 'SECOND';
+  console.log(`[${halfStr} HALF] ${key}: ${value}`);
+}
