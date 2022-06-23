@@ -110,8 +110,6 @@ for (const scorer of game.scored)
 console.log(scorers);
 */
 
-// Coding challenge #3
-
 const gameEvents = new Map([
   [17, '⚽ GOAL'],
   [36, '🔁 Substitution'],
@@ -126,6 +124,9 @@ const gameEvents = new Map([
   [92, '🔶 Yellow card'],
 ]);
 
+// Coding challenge #3
+
+/*
 // 1.
 const events = [...new Set(gameEvents.values())];
 
@@ -146,3 +147,28 @@ for (const [key, value] of gameEvents) {
   const halfStr = key < 45 ? 'FIRST' : 'SECOND';
   console.log(`[${halfStr} HALF] ${key}: ${value}`);
 }
+*/
+
+// Coding challenge #4
+
+const convertion = input => {
+  const rows = input.toLowerCase().split('\n');
+
+  for (const [i, row] of rows.entries()) {
+    const [first, second] = row.trim().split('_');
+    const output = `${first}${second.replace(
+      second[0],
+      second[0].toUpperCase()
+    )}`;
+    console.log(output.padEnd(20, ' ') + '✅'.repeat(i + 1));
+  }
+};
+
+document.body.append(document.createElement('textarea'));
+document.body.append(document.createElement('button'));
+
+const textarea = document.querySelector('textarea');
+
+document.querySelector('button').addEventListener('click', () => {
+  if (textarea.value !== '') convertion(textarea.value);
+});
