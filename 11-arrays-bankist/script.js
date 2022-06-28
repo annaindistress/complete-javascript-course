@@ -296,6 +296,7 @@ console.log(max);
 
 // The Magic of Chaining Methods
 
+/*
 const eurToUsd = 1.1;
 
 // PIPELINE
@@ -305,3 +306,4 @@ const totalDepositsUSD = movements
   .reduce((acc, mov) => acc + mov, 0);
 
 console.log(totalDepositsUSD);
+*/
